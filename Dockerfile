@@ -6,9 +6,10 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install python3-opencv python3-scipy python3-numpy -y
 #RUN apt-get install -y v4l-utils
+RUN apt-get install curl -y
 COPY ./requirements.txt /requirements.txt
 RUN pip install --upgrade pip
-RUN apt-get install rust -y
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 RUN pip install -r /requirements.txt
 RUN mkdir /app
 WORKDIR /app
