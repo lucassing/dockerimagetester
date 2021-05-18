@@ -1,0 +1,6 @@
+django==3.0.0
+flake8==3.8.3
+pyserial==3.4
+pillow==8.0.0
+channels==2.4.0
+channels-redis==3.2.0
