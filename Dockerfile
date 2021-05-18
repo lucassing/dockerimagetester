@@ -10,6 +10,7 @@ RUN apt-get install curl -y
 COPY ./requirements.txt /requirements.txt
 RUN pip install --upgrade pip
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+RUN apt install build-essential libssl-dev libffi-dev rustc -y
 RUN pip install -r /requirements.txt
 RUN mkdir /app
 WORKDIR /app
