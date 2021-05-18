@@ -20,5 +20,5 @@ jobs:
       - name: build the image
         run: |
           docker buildx build --push \
-            --tag ocmanager/ocmanager:latest \
-            --platform linux/arm/v7 .
+            --tag lucassinggg/imagetest:latest \
+            --platform linux/amd64,linux/arm64,linux/arm/v7 .
