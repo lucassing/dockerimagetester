@@ -4,8 +4,8 @@ MAINTAINER Lucas M. Sing
 ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install python3-opencv python3-scipy python3-numpy -y
-RUN apt-get install -y v4l-utils
+#RUN apt-get install python3-opencv python3-scipy python3-numpy -y
+#RUN apt-get install -y v4l-utils
 COPY ./requirements.txt /requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r /requirements.txt
