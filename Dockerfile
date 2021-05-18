@@ -2,6 +2,7 @@ FROM python:3.7
 MAINTAINER Lucas M. Sing
 
 ENV PYTHONUNBUFFERED 1
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST 1
 
 RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install python3-opencv python3-scipy python3-numpy -y
