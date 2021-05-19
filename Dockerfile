@@ -16,7 +16,6 @@ RUN apt-get install curl -y
 COPY ./requirements.txt /requirements.txt
 
 RUN pip install --upgrade pip
-RUN pip install scipy
 
 # Installing Rust for compiling cryptography in ARMv7
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
