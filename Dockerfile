@@ -8,11 +8,13 @@ RUN apt-get update && apt-get upgrade -y
 
 #RUN apt-get install python3-opencv python3-scipy python3-numpy -y
 #RUN apt-get install -y v4l-utils
+RUN apt-get install gfortran libopenblas-dev liblapack-dev
 RUN apt-get install curl -y
 
 COPY ./requirements.txt /requirements.txt
 
 RUN pip install --upgrade pip
+RUN pip install scipy
 
 # Installing Rust for compiling cryptography in ARMv7
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
